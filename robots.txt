@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ReverseEngineeringDude.github.io/sitemap.xml
