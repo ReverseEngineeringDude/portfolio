@@ -74,6 +74,24 @@ body {
 .nav-left {
     font-size: 1.5rem;
     font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo-hidden {
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: pre;
+    transition: max-width 0.4s ease, opacity 0.4s ease;
+    color: #d11111;
+}
+
+.nav-left:hover .logo-hidden {
+    max-width: 200px;
+    opacity: 1;
 }
 
 .nav-right {
@@ -640,12 +658,17 @@ body {
         margin-top: 0;
     }
 
-    .torn-paper-note {
-        position: relative;
-        right: 0;
-        top: 0;
-        margin: 2rem auto;
-        max-width: 80%;
+    .hero-section .torn-paper-note {
+        position: absolute;
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: 5vh;
+        transform: translateX(-50%) rotate(-2deg);
+        margin: 0;
+        max-width: 90%;
+        text-align: center;
+        z-index: 10;
     }
 
     .mindset-list {
@@ -751,4 +774,66 @@ body {
     box-shadow: 6px 6px 0px rgba(209, 17, 17, 1);
     border-color: #d11111;
     color: #d11111;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    /* Navbar links overflow fix */
+    .nav-right {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    /* Chapter 1 & General Panels: Fix side-by-side crushing */
+    .panel-left {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .panel-left > div:first-child {
+        width: 100%;
+    }
+
+    .polaroid {
+        margin: 2rem auto !important;
+    }
+
+    /* Chapter 2 & 3: Typography and spacing */
+    .script-title.small {
+        font-size: 3.5rem;
+    }
+    .handwritten-heading {
+        font-size: 2.2rem;
+    }
+    
+    /* Chapter 4: Timeline padding & sizing */
+    .timeline {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 1rem;
+    }
+    .timeline-title {
+        font-size: 1.8rem;
+    }
+    .timeline-marker {
+        left: -12.5px;
+    }
+
+    /* Chapter 5: Social Icons */
+    .social-icon-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    /* Fix global container padding for narrow screens */
+    .container {
+        padding: 0 1rem;
+    }
 }

@@ -1,0 +1,27 @@
+# Praveen MT - Character Sheet & Dossier
+
+## Overview
+Praveen MT (online alias: ReverseEngineeringDude) is a Computer Engineering student from Kerala, India, specializing in Cybersecurity, Reverse Engineering, App Development (Flutter), and Embedded Systems. 
+
+## Mindset & Philosophy
+"Engineering systems beyond the surface."
+"Work in Silence, Let Success Make the Noise."
+
+## Key Channels & Comms
+- GitHub: https://github.com/ReverseEngineeringDude
+- HackerOne: https://hackerone.com/ReverseEngineeringDude
+- Bugcrowd: https://bugcrowd.com/ReverseEngineeringDude
+- LinkedIn: https://www.linkedin.com/in/redbytesec/
+- X/Twitter: https://x.com/RedByteSec
+- Telegram: https://t.me/ReverseEngineeringDude
+
+## Core Arsenal
+1. **Cybersecurity:** Reverse Engineering, Wireshark, Radare2, Bug Bounty Hunting
+2. **App Development:** Flutter, Dart, Firebase
+3. **Web Technologies:** Python, Django, JavaScript, Streamlit
+4. **Hardware & AI:** ESP32, IoT Systems, AI Automation Workflows
+
+## Current Directives
+- B.Tech in Computer Engineering (2025 - 2027)
+- Active Bug Bounty Hunting
+- Building open-source tools and scripts on GitHub
