@@ -16,6 +16,7 @@ const Navbar = () => {
             <a href="#chapter-03" className="nav-link" data-target="03">[03]</a>
             <a href="#chapter-04" className="nav-link" data-target="04">[04]</a>
             <a href="#chapter-05" className="nav-link" data-target="05">[05]</a>
+            <a href="/portfolio/Praveen_MT_Resume_2026.pdf" download="Praveen_MT_Resume_2026.pdf" className="nav-link" style={{ color: '#d11111', fontWeight: 'bold', marginLeft: '1rem' }} title="Download Resume">[RESUME]</a>
         </div>
     </nav>
 
