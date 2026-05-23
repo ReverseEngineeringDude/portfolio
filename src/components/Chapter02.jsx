@@ -47,19 +47,45 @@ const Chapter02 = () => {
         fetchGitHubProjects();
     }, []);
 
-    const RepoCard = ({ repo }) => (
-        <div style={{ borderBottom: '1px dashed #666', paddingBottom: '1rem', transition: 'transform 0.2s' }}>
-            <a href={repo.html_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }} onMouseOver={(e)=>e.currentTarget.style.transform='translateX(5px)'} onMouseOut={(e)=>e.currentTarget.style.transform='none'}>
-                <h4 className="proj-ep" style={{ margin: 0, color: '#d11111' }}> {repo.name.toUpperCase()}</h4>
-                <p style={{ fontFamily: 'var(--font-typewriter)', fontSize: '1rem', margin: '0.5rem 0' }}>{repo.description || 'No public description available. Classified.'}</p>
-                <div style={{ display: 'flex', gap: '1rem', fontFamily: 'var(--font-typewriter)', fontSize: '0.85rem', color: '#555' }}>
-                    <span>⭐ {repo.stargazers_count}</span>
-                    <span>🍴 {repo.forks_count}</span>
-                    <span>{repo.language || 'Unknown'}</span>
-                </div>
-            </a>
-        </div>
-    );
+    const repoExtras = {
+        'Harmony-Music': { impact: 'Automated CI/CD pipeline & API parsing. Actively maintained.', demo: 'https://github.com/ReverseEngineeringDude/Harmony-Music/releases' },
+        'LatePass': { impact: 'Used by students to automate daily pass generation.' },
+        'Blind-assist': { impact: 'Hardware/IoT integration for real-world accessibility.' },
+        'DataStructureVisualizer': { impact: 'Educational tool for interactive algorithm visualization.', demo: 'https://reverseengineeringdude.github.io/DataStructureVisualizer/' },
+        'WireFlowWeb': { impact: 'Advanced web architecture & network visualization tool.' },
+        'LovePlayground': { impact: 'Interactive frontend playground and experimental UI.' }
+    };
+
+    const RepoCard = ({ repo }) => {
+        const extra = repoExtras[repo.name] || {};
+        
+        return (
+            <div style={{ borderBottom: '1px dashed #666', paddingBottom: '1.5rem', transition: 'transform 0.2s' }}>
+                <a href={repo.html_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }} onMouseOver={(e)=>e.currentTarget.style.transform='translateX(5px)'} onMouseOut={(e)=>e.currentTarget.style.transform='none'}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                        <h4 className="proj-ep" style={{ margin: 0, color: '#d11111', fontSize: '1.4rem' }}> {repo.name.toUpperCase()}</h4>
+                        {extra.demo && (
+                            <span style={{ fontSize: '0.8rem', background: '#d11111', color: '#fff', padding: '0.2rem 0.5rem', borderRadius: '3px', fontWeight: 'bold' }}>LIVE DEMO</span>
+                        )}
+                    </div>
+                    <p style={{ fontFamily: 'var(--font-typewriter)', fontSize: '1rem', margin: '0.5rem 0', color: '#333' }}>{repo.description || 'No public description available. Classified.'}</p>
+                    
+                    {extra.impact && (
+                        <div style={{ background: 'rgba(209, 17, 17, 0.1)', borderLeft: '3px solid #d11111', padding: '0.5rem 0.8rem', margin: '0.8rem 0', fontFamily: 'var(--font-typewriter)', fontSize: '0.9rem', fontStyle: 'italic', color: '#444' }}>
+                            <i className="fa-solid fa-bolt" style={{ color: '#d11111', marginRight: '5px' }}></i>
+                            {extra.impact}
+                        </div>
+                    )}
+                    
+                    <div style={{ display: 'flex', gap: '1rem', fontFamily: 'var(--font-typewriter)', fontSize: '0.85rem', color: '#666', marginTop: '0.8rem' }}>
+                        <span><i className="fa-solid fa-star"></i> {repo.stargazers_count}</span>
+                        <span><i className="fa-solid fa-code-branch"></i> {repo.forks_count}</span>
+                        <span><i className="fa-solid fa-terminal"></i> {repo.language || 'Unknown'}</span>
+                    </div>
+                </a>
+            </div>
+        );
+    };
 
     return (
         <section id="chapter-02" className="chapter chapter-02" data-chapter="02">
