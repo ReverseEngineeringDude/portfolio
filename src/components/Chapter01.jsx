@@ -53,28 +53,24 @@ const Chapter01 = () => {
         <h2 className="section-script-title fade-up" style={{'marginTop': '5rem'}}>Core Skills & Arsenal</h2>
         <div className="skills-grid">
             <div className="gear-card fade-up stagger-1">
-                <div className="gear-sketch" style={{'fontSize': '3rem', 'marginBottom': '0.5rem'}}>🛡️</div>
-                <p className="hand-label" style={{'fontSize': '1.5rem'}}>Cybersecurity</p>
-                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1rem', 'marginTop': '0.5rem'}}>Reverse Eng,
-                    Wireshark, Radare2</p>
+                <div className="gear-sketch" style={{'marginBottom': '1rem'}}><i className="fa-solid fa-shield-halved" style={{ fontSize: '3.5rem', color: '#333' }}></i></div>
+                <p className="hand-label" style={{'fontSize': '1.8rem', 'color': '#d11111', 'fontWeight': 'bold'}}>Cybersecurity</p>
+                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1.1rem', 'marginTop': '0.8rem', 'lineHeight': '1.4'}}>Reverse Eng, Wireshark, Radare2</p>
             </div>
             <div className="gear-card fade-up stagger-2">
-                <div className="gear-sketch" style={{'fontSize': '3rem', 'marginBottom': '0.5rem'}}>📱</div>
-                <p className="hand-label" style={{'fontSize': '1.5rem'}}>App Dev</p>
-                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1rem', 'marginTop': '0.5rem'}}>Flutter, Dart,
-                    Firebase</p>
+                <div className="gear-sketch" style={{'marginBottom': '1rem'}}><i className="fa-solid fa-mobile-screen-button" style={{ fontSize: '3.5rem', color: '#333' }}></i></div>
+                <p className="hand-label" style={{'fontSize': '1.8rem', 'color': '#d11111', 'fontWeight': 'bold'}}>App Dev</p>
+                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1.1rem', 'marginTop': '0.8rem', 'lineHeight': '1.4'}}>Flutter, Dart, Firebase</p>
             </div>
             <div className="gear-card fade-up stagger-3">
-                <div className="gear-sketch" style={{'fontSize': '3rem', 'marginBottom': '0.5rem'}}>💻</div>
-                <p className="hand-label" style={{'fontSize': '1.5rem'}}>Web Tech</p>
-                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1rem', 'marginTop': '0.5rem'}}>Python, Django, JS,
-                    Streamlit</p>
+                <div className="gear-sketch" style={{'marginBottom': '1rem'}}><i className="fa-solid fa-laptop-code" style={{ fontSize: '3.5rem', color: '#333' }}></i></div>
+                <p className="hand-label" style={{'fontSize': '1.8rem', 'color': '#d11111', 'fontWeight': 'bold'}}>Web Tech</p>
+                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1.1rem', 'marginTop': '0.8rem', 'lineHeight': '1.4'}}>Python, Django, JS, Streamlit</p>
             </div>
             <div className="gear-card fade-up stagger-4">
-                <div className="gear-sketch" style={{'fontSize': '3rem', 'marginBottom': '0.5rem'}}>⚡</div>
-                <p className="hand-label" style={{'fontSize': '1.5rem'}}>Hardware & AI</p>
-                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1rem', 'marginTop': '0.5rem'}}>ESP32, IoT, AI
-                    Automation</p>
+                <div className="gear-sketch" style={{'marginBottom': '1rem'}}><i className="fa-solid fa-microchip" style={{ fontSize: '3.5rem', color: '#333' }}></i></div>
+                <p className="hand-label" style={{'fontSize': '1.8rem', 'color': '#d11111', 'fontWeight': 'bold'}}>Hardware & AI</p>
+                <p style={{'fontFamily': 'var(--font-typewriter)', 'fontSize': '1.1rem', 'marginTop': '0.8rem', 'lineHeight': '1.4'}}>ESP32, IoT, AI Automation</p>
             </div>
         </div>
     </div>
