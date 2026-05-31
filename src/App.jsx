@@ -18,13 +18,24 @@ function App() {
     }
 
     // Force fullscreen on first interaction for laptops
-    const handleFirstClick = () => {
-      if (window.innerWidth >= 768 && !document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch((e) => console.log('Fullscreen rejected by browser.'));
+    const handleInteraction = () => {
+      if (window.innerWidth >= 768 && !document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+        const elem = document.documentElement;
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen().catch((e) => console.log('Fullscreen rejected by browser.'));
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+          elem.mozRequestFullScreen().catch((e) => console.log('Fullscreen rejected by browser.'));
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+          elem.webkitRequestFullscreen().catch((e) => console.log('Fullscreen rejected by browser.'));
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+          elem.msRequestFullscreen().catch((e) => console.log('Fullscreen rejected by browser.'));
+        }
       }
-      document.removeEventListener('click', handleFirstClick);
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('keydown', handleInteraction);
     };
-    document.addEventListener('click', handleFirstClick);
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('keydown', handleInteraction);
 
     // 1. Scroll observer for fade-up animations and stat bars
     const observerOptions = {
@@ -111,7 +122,8 @@ function App() {
         });
         window.removeEventListener('scroll', onScrollNavbar);
         window.removeEventListener('scroll', onScrollParallax);
-        document.removeEventListener('click', handleFirstClick);
+        document.removeEventListener('click', handleInteraction);
+        document.removeEventListener('keydown', handleInteraction);
     };
   }, []);
 
