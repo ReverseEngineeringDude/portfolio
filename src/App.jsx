@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import Chapter01 from './components/Chapter01';
@@ -9,7 +9,23 @@ import Chapter05 from './components/Chapter05';
 import Footer from './components/Footer';
 
 function App() {
+  const [showMobileWarning, setShowMobileWarning] = useState(false);
+
   useEffect(() => {
+    // Check if mobile device
+    if (window.innerWidth < 768) {
+      setShowMobileWarning(true);
+    }
+
+    // Force fullscreen on first interaction for laptops
+    const handleFirstClick = () => {
+      if (window.innerWidth >= 768 && !document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch((e) => console.log('Fullscreen rejected by browser.'));
+      }
+      document.removeEventListener('click', handleFirstClick);
+    };
+    document.addEventListener('click', handleFirstClick);
+
     // 1. Scroll observer for fade-up animations and stat bars
     const observerOptions = {
         threshold: 0.15,
@@ -95,12 +111,46 @@ function App() {
         });
         window.removeEventListener('scroll', onScrollNavbar);
         window.removeEventListener('scroll', onScrollParallax);
+        document.removeEventListener('click', handleFirstClick);
     };
   }, []);
 
   return (
     <>
       <div id="mouse-follower" className="mouse-follower"></div>
+      
+      {showMobileWarning && (
+        <div style={{
+          position: 'fixed',
+          top: '0',
+          left: '0',
+          width: '100%',
+          background: 'rgba(209, 17, 17, 0.95)',
+          color: '#fff',
+          zIndex: 9999,
+          padding: '1rem',
+          textAlign: 'center',
+          fontFamily: 'var(--font-typewriter)',
+          fontSize: '0.9rem',
+          boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}>
+          <span><i className="fa-solid fa-desktop" style={{marginRight: '8px'}}></i> For the optimal immersive experience, view on a laptop or desktop screen.</span>
+          <button onClick={() => setShowMobileWarning(false)} style={{
+            background: 'none',
+            border: '1px solid #fff',
+            color: '#fff',
+            padding: '4px 8px',
+            cursor: 'pointer',
+            marginLeft: '10px'
+          }}>
+            <i className="fa-solid fa-times"></i>
+          </button>
+        </div>
+      )}
+
       <Navbar />
       <main>
         <Landing />
