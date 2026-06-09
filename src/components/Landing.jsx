@@ -7,10 +7,10 @@ const Landing = () => {
             <section id="chapter-00" className="chapter hero-section" data-chapter="00">
                 <div className="dynamic-hero-wrapper">
                     <div className="parallax-bg-wrapper">
-                        <img src="/portfolio/praveen_landscape_background.png" alt="Landing Background" className="hero-bg" />
+                        <img src="/praveen_landscape_background.png" alt="Landing Background" className="hero-bg" />
                     </div>
                     <div className="parallax-fg-wrapper fade-up">
-                        <img src="/portfolio/praveen_landscape_foreground.png" alt="Praveen MT Foreground" className="hero-fg" />
+                        <img src="/praveen_landscape_foreground.png" alt="Praveen MT Foreground" className="hero-bg hero-fg" />
                     </div>
                 </div>
 

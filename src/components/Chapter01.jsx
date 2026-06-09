@@ -32,7 +32,7 @@ const Chapter01 = () => {
                 <div className="polaroid p-1 fade-up stagger-2"
                     style={{'transform': 'rotate(5deg)', 'boxShadow': '2px 5px 15px rgba(0,0,0,0.4)'}}>
                     <div className="photo-placeholder">
-                        <img src="/portfolio/praveen1.png" alt="Praveen Photo 1" className="real-photo" />
+                        <img src="/praveen1.png" alt="Praveen Photo 1" className="real-photo" />
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ const Chapter01 = () => {
                     binaries and network behavior to scalable applications and interactive user experiences.
                 </p>
                 <div style={{ marginTop: '2rem' }}>
-                    <a href="/portfolio/Praveen_MT_Resume_2026.pdf" download="Praveen_MT_Resume_2026.pdf" 
+                    <a href="/Praveen_MT_Resume_2026.pdf" download="Praveen_MT_Resume_2026.pdf" 
                        style={{
                            display: 'inline-block',
                            padding: '0.8rem 1.5rem',
