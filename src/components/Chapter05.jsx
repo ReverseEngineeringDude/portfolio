@@ -91,7 +91,6 @@ const Chapter05 = () => {
             </a>
 
         </div>
-        </div>
 
         {/* SEO FAQ Section */}
         <div className="faq-container fade-up" style={{ fontFamily: 'var(--font-typewriter)', marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.4)', borderRadius: '8px' }}>
