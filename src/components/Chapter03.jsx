@@ -8,7 +8,18 @@ const Chapter03 = () => {
     <div className="container">
         <h2 className="section-script-title fade-up">Tech Stack & Arsenal</h2>
         
-        <div className="collage-layout" style={{'minHeight': 'auto', 'gap': '3rem', 'marginTop': '2rem'}}>
+        <div className="technical-expertise-section fade-up" style={{ marginTop: '2rem' }}>
+            <h3 className="section-script-title" style={{ fontSize: '1.8rem', color: '#333' }}>Technical Arsenal & Research Focus</h3>
+            <ul className="hacker-list" style={{ fontFamily: 'var(--font-typewriter)', color: '#444', fontSize: '1.2rem', lineHeight: '1.8' }}>
+                <li><strong>Cybersecurity & Penetration Testing:</strong> Web Application Security, Network Sniffing (Wireshark), Bug Bounty Hunting.</li>
+                <li><strong>Reverse Engineering:</strong> Android APK Decompilation, Smali Patching, Binary Analysis (Radare2, Frida), DRM Bypassing.</li>
+                <li><strong>Software Development:</strong> Cross-platform mobile/desktop apps (Flutter/Dart), Backend automation (Python), Web Architecture (React, Vite).</li>
+                <li><strong>Embedded Systems:</strong> IoT Architecture, ESP32 Microcontrollers, C/C++ Hardware Interfacing.</li>
+                <li><strong>Infrastructure & AI:</strong> CI/CD Pipelines (GitHub Actions), AI Application Integration, Firebase Architecture.</li>
+            </ul>
+        </div>
+
+        <div className="collage-layout" style={{'minHeight': 'auto', 'gap': '3rem', 'marginTop': '4rem'}}>
             
             {/* Column 1: Programming Languages */}
             <div className="sketch-panel fade-up stagger-1" style={{'background': 'rgba(255,255,255,0.4)'}}>

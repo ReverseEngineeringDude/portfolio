@@ -10,7 +10,7 @@ const Landing = () => {
                         <img src="/praveen_landscape_background.png" alt="Landing Background" className="hero-bg" />
                     </div>
                     <div className="parallax-fg-wrapper fade-up">
-                        <img src="/praveen_landscape_foreground.png" alt="Praveen MT Foreground" className="hero-bg hero-fg" />
+                        <img src="/praveen_landscape_foreground.png" alt="Praveen MT - ReverseEngineeringDude and RedByteSec - Cybersecurity Student in Kerala" className="hero-bg hero-fg" />
                     </div>
                 </div>
 
@@ -20,6 +20,9 @@ const Landing = () => {
                     <div className="title-area fade-up">
                         <h1 className="script-title">Praveen MT</h1>
                         <p className="typewriter-sub">FOCUSED. DISCIPLINED. FEARLESS.</p>
+                        <p className="hero-seo-subtitle" style={{ display: 'none' }}>
+                            Also known as RedByteSec and ReverseEngineeringDude. Software Engineer, Cybersecurity Researcher, and Flutter Developer based in Kerala, India.
+                        </p>
                     </div>
 
                     {/* Torn Paper Note */}

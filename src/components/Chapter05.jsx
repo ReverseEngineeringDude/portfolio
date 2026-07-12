@@ -91,6 +91,24 @@ const Chapter05 = () => {
             </a>
 
         </div>
+        </div>
+
+        {/* SEO FAQ Section */}
+        <div className="faq-container fade-up" style={{ fontFamily: 'var(--font-typewriter)', marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.4)', borderRadius: '8px' }}>
+            <h2 className="section-script-title" style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>Frequently Asked Questions</h2>
+            <div className="faq-item" style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ color: '#d11111', fontSize: '1.2rem', marginBottom: '0.5rem' }}>Who is RedByteSec?</h4>
+                <p style={{ color: '#333', lineHeight: '1.5' }}>RedByteSec is the cybersecurity and professional alias of Praveen MT, a Software Engineer and Reverse Engineering expert based in Kerala.</p>
+            </div>
+            <div className="faq-item" style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ color: '#d11111', fontSize: '1.2rem', marginBottom: '0.5rem' }}>What does ReverseEngineeringDude specialize in?</h4>
+                <p style={{ color: '#333', lineHeight: '1.5' }}>ReverseEngineeringDude (Praveen MT) specializes in Android reverse engineering, binary analysis, Flutter development, and embedded systems security.</p>
+            </div>
+            <div className="faq-item">
+                <h4 style={{ color: '#d11111', fontSize: '1.2rem', marginBottom: '0.5rem' }}>Is Praveen MT available for freelance Flutter development or security consulting?</h4>
+                <p style={{ color: '#333', lineHeight: '1.5' }}>Yes, Praveen MT is open to collaborations, internships, and freelance projects requiring expertise in Flutter, Python, and Cybersecurity.</p>
+            </div>
+        </div>
     </div>
 </section>
         </>
